@@ -25,6 +25,9 @@ class App {
     this.server.use(cors());
 
     this.server.use(express.json());
+
+    this.server.use(express.limit(100000000))
+
   }
 
   routes() {
