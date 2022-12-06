@@ -7,6 +7,12 @@ import PedidosController from './controllers/PedidosController';
 import CartoesController from './controllers/CartoesController';
 import EdicaohomeController from './controllers/EdicaohomeController';
 import Emailclientescontroller from './controllers/Emailclientescontroller';
+import Franquiascontroller from './controllers/Franquiascontroller';
+
+
+
+
+
 const routes = new Router();
 
 
@@ -65,6 +71,10 @@ routes.get('/emailsclientes', Emailclientescontroller.get)
 routes.post('/emailsclientes', Emailclientescontroller.post)
 routes.delete('/emailsclientes/:_id', Emailclientescontroller.delete)
 routes.put('/emailsclientes/:_id', Emailclientescontroller.update)
+
+
+routes.post('/franquias', Franquiascontroller.post)
+routes.get('/franquias', Franquiascontroller.get)
 
 export default routes;
 
