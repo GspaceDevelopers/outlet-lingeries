@@ -2,7 +2,7 @@ import { Schema, model } from 'mongoose'
 
 
 const Edicaohome = new Schema({
-    componentetexto1: String,
+    componentetexto1: Number,
     componentelogos: {
         logo1: String,
         logo2: String,
