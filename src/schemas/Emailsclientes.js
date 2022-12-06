@@ -1,7 +1,7 @@
-import { model, schema } from 'mongoose'
+import { model, Schema } from 'mongoose'
 
 
-const Emailsclientes = new schema({
+const Emailsclientes = new Schema({
     nome: String,
     email: String
 })
