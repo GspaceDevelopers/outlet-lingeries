@@ -3,7 +3,7 @@ import Pedidos from "../schemas/Pedidos";
 class PedidosController {
 
     async post(req, res) {
-        const { idpedido, nomecliente, uid, cpf, produto: { modelo: modelo }, endereco, cep, data, hora, status, valor } = req.body
+        const { idpedido, nomecliente, uid, cpf, produto: { modelo: modelo }, endereco, cep, data, hora, status, valor, codrastreio } = req.body
         const pedidolist = await Pedidos.create({
             idpedido: idpedido,
             nomecliente: nomecliente,
@@ -17,7 +17,8 @@ class PedidosController {
             data: data,
             hora: hora,
             status: status,
-            valor: valor
+            valor: valor,
+            codrastreio:codrastreio
 
         })
         return res.json(pedidolist)
@@ -64,7 +65,7 @@ class PedidosController {
     }
     async update(req, res) {
         const { idpedido } = req.params
-        const { nomecliente, uid, cpf, produto: { modelo: modelo }, endereco, cep, data, hora, status, valor } = req.body
+        const { nomecliente, uid, cpf, produto: { modelo: modelo }, endereco, cep, data, hora, status, valor, codrastreio } = req.body
         const pedidolist = await Pedidos.updateOne({ idpedido: idpedido }, {
             idpedido: idpedido,
             nomecliente: nomecliente,
@@ -78,7 +79,8 @@ class PedidosController {
             data: data,
             hora: hora,
             status: status,
-            valor: valor
+            valor: valor,
+            codrastreio: codrastreio
         })
 
         return res.json(pedidolist)

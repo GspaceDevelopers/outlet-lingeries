@@ -14,6 +14,7 @@ const Pedidos = new Schema({
     data: String,
     hora: String,
     status: String,
-    valor: String
+    valor: String,
+    codrastreio: String
 })
 export default model("Pedidos", Pedidos);
