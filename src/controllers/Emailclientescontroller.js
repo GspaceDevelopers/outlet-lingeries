@@ -20,12 +20,12 @@ class Emailclientecontroller {
     }
     async delete(req, res) {
         const { _id } = req.params
-        const Emaillist = Emailsclientes.deleteOne({ _id: _id })
+        const Emaillist = await Emailsclientes.deleteOne({ _id: _id })
 
         return res.json(Emaillist)
     }
     async get(req, res) {
-        const Emaillist = Emailsclientes.find()
+        const Emaillist = await Emailsclientes.find()
         return res.json(Emaillist)
     }
 }
