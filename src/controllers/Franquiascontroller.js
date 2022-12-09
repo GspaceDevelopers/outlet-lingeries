@@ -5,7 +5,7 @@ class Franquiascontroller {
     async post(req, res) {
         const { nome, email, cpf, telefone } = req.body
 
-        const Franquiaslist = Franquias.create({
+        const Franquiaslist = await Franquias.create({
             nome: nome,
             email: email,
             cpf: cpf,
@@ -14,7 +14,7 @@ class Franquiascontroller {
         return res.json(Franquiaslist)
     }
     async get(req, res) {
-        const Franquiaslist = Franquias.find()
+        const Franquiaslist = await Franquias.find()
         return res.json(Franquiaslist)
     }
 
