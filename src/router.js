@@ -8,7 +8,7 @@ import CartoesController from './controllers/CartoesController';
 import EdicaohomeController from './controllers/EdicaohomeController';
 import Emailclientescontroller from './controllers/Emailclientescontroller';
 import Franquiascontroller from './controllers/Franquiascontroller';
-
+import SacController from './controllers/SacController';
 
 
 
@@ -75,6 +75,10 @@ routes.put('/emailsclientes/:_id', Emailclientescontroller.update)
 
 routes.post('/franquias', Franquiascontroller.post)
 routes.get('/franquias', Franquiascontroller.get)
+
+
+routes.post('/sac', SacController.post)
+routes.get('/sac', SacController.get)
 
 export default routes;
 
