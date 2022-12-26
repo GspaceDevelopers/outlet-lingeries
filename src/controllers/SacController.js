@@ -2,12 +2,11 @@ import Sac from "../schemas/Sac";
 
 class Saccontroller {
     async post(req, res) {
-        const { nome, email, mensagem,data } = req.body;
+        const { nome, email, mensagem } = req.body;
         const saclist = await Sac.create({
             nome: nome,
             email: email,
-            mensagem: mensagem,
-            data:data
+            mensagem: mensagem
         })
         return res.json(saclist)
     }
