@@ -12,7 +12,7 @@ class Sandemailcontroller {
             }
         })
         transporter.sendMail({
-            from: "outletdaslingeries.gspace@gmail.com",
+            from: "Outlet das Lingeries",
             to: email,
             html: mensagem,
             subject: "Outlet das Lingeries",
