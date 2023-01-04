@@ -2,7 +2,7 @@ import nodemailer from 'nodemailer'
 
 class Sandemailcontroller {
     post(req, res) {
-        const { mensagem, email } = req.body
+        const { mensagem, email,img } = req.body
         const transporter = nodemailer.createTransport({
             host: "smtp.gmail.com",
             port: 465,
@@ -15,7 +15,10 @@ class Sandemailcontroller {
             from: "outletdaslingeries.gspace@gmail.com",
             to: email,
             html: mensagem,
-            subject:"Outlet das Lingeries"
+            subject: "Outlet das Lingeries",
+            attachments: {
+                __filename: img,
+            }
         })
         return res.json(transporter)
     }
