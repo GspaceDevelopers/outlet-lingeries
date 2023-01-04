@@ -1,14 +1,14 @@
 import nodemailer from 'nodemailer'
 
 class Sandemailcontroller {
-    async post(req, res) {
+    post(req, res) {
         const { mensagem, email } = req.body
-        const transporter = await nodemailer.createTransport({
+        const transporter = nodemailer.createTransport({
             host: "smtp.gmail.com",
             port: 465,
             auth: {
                 user: 'outletdaslingeries.gspace@gmail.com',
-                pass: ''
+                pass: 'qrqujkflralvcawj'
             }
         })
         transporter.sendMail({
@@ -16,7 +16,7 @@ class Sandemailcontroller {
             to: email,
             html: mensagem
         })
-        res.json(transporter)
+        return res.json(transporter)
     }
 }
 
