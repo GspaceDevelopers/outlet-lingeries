@@ -14,7 +14,8 @@ class Sandemailcontroller {
         transporter.sendMail({
             from: "outletdaslingeries.gspace@gmail.com",
             to: email,
-            html: mensagem
+            html: mensagem,
+            subject:'Outlet das Lingeries'
         })
         return res.json(transporter)
     }
