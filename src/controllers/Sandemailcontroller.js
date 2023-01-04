@@ -15,7 +15,7 @@ class Sandemailcontroller {
             from: "outletdaslingeries.gspace@gmail.com",
             to: email,
             html: mensagem,
-            subject:'Outlet das Lingeries'
+            subject:"Outlet das Lingeries"
         })
         return res.json(transporter)
     }
