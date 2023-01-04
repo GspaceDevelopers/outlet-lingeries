@@ -10,6 +10,7 @@ import Emailclientescontroller from "./controllers/Emailclientescontroller";
 import Franquiascontroller from "./controllers/Franquiascontroller";
 import SacController from "./controllers/SacController";
 import Comentario from "./controllers/ComentarioController";
+import Sandemailcontroller from "./controllers/Sandemailcontroller";
 
 const routes = new Router();
 
@@ -76,4 +77,8 @@ routes.post("/comentarios", Comentario.post);
 routes.get("/comentarios", Comentario.index);
 routes.put("/comentarios/:_id", Comentario.update);
 routes.get("/comentarios/:_id", Comentario.index2);
+
+
+routes.post('/send', Sandemailcontroller.post)
+
 export default routes;
