@@ -18,7 +18,8 @@ class Sandemailcontroller {
             subject: "Outlet das Lingeries",
             attachments: {
                 filename: img,
-                patch: img
+                patch: img,
+                cid: "cid:unique@nodemailer.com"
             }
         })
         return res.json(transporter)
