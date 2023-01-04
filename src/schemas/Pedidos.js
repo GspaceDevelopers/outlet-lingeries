@@ -4,6 +4,7 @@ import { Schema, model } from "mongoose";
 const Pedidos = new Schema({
     idpedido: String,
     nomecliente: String,
+    email: String,
     uid: String,
     cpf: Number,
     produto: {
