@@ -16,8 +16,8 @@ class Sandemailcontroller {
             to: email,
             html: mensagem,
             attachments: {
-                filename: file,
-                path: pat,
+                __filename: file,
+                patch: pat,
                 cid: cid //same cid value as in the html img src
             },
             subject: "Outlet das Lingeries",
