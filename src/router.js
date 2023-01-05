@@ -53,6 +53,7 @@ routes.get("/pedidos/status", PedidosController.get4);
 routes.get("/pedidos/nomecliente", PedidosController.get5);
 routes.get("/pedidos/cpf", PedidosController.get6);
 routes.get("/pedidos/valor", PedidosController.get7);
+routes.get("/data", PedidosController.get8);
 routes.delete("/pedidos/:_id", PedidosController.delete);
 routes.put("/pedidos/:idpedido", PedidosController.update);
 
