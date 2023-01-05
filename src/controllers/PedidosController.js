@@ -59,6 +59,11 @@ class PedidosController {
         const pedidolist = await Pedidos.find({ valor: valor })
         return res.json(pedidolist)
     }
+      async get8(req, res) {
+        const { data } = req.query;
+        const pedidolist = await Pedidos.find({ data: data })
+        return res.json(pedidolist)
+    }
     async delete(req, res) {
         const { _id } = req.params;
         const pedidolist = await Pedidos.deleteOne({ _id: _id })
