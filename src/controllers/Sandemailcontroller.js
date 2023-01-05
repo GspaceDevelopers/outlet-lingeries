@@ -19,7 +19,7 @@ class Sandemailcontroller {
         filename: file,
         path: pat,
         cid: cid //same cid value as in the html img src
-    }]
+    }],   
             subject: "Outlet das Lingeries",
            
         })
