@@ -8,11 +8,11 @@ class Sandemailcontroller {
             port: 465,
             auth: {
                 user: 'outletdaslingeries.gspace@gmail.com',
-                pass: 'qrqujkflralvcawj'
+                pass: 'txhyudodrxdwgddm'
             }
         })
         transporter.sendMail({
-            from: "outletdaslingeries.gspace@gmail.com",
+            from: "gspacedevelopers@gmail.com",
             to: email,
             html: mensagem,
             subject: "Outlet das Lingeries",
