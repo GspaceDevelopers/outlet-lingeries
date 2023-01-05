@@ -7,7 +7,7 @@ class Sandemailcontroller {
             host: "smtp.gmail.com",
             port: 465,
             auth: {
-                user: 'outletdaslingeries.gspace@gmail.com',
+                user: 'gspacedevelopers@gmail.com',
                 pass: 'txhyudodrxdwgddm'
             }
         })
