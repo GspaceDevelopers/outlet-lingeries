@@ -3,6 +3,7 @@ import { Schema, model } from "mongoose";
 
 const Pedidos = new Schema({
     idpedido: String,
+    idLojafranqueada:String,
     nomecliente: String,
     email: String,
     uid: String,
