@@ -75,6 +75,11 @@ class PedidosController {
         const pedidolist = await Pedidos.find({ idLojafranqueada: idLojafranqueada,uid:uid })
         return res.json(pedidolist)
     }
+       async get11(req, res) {
+        const { idLojafranqueada,status } = req.query;
+        const pedidolist = await Pedidos.find({ idLojafranqueada: idLojafranqueada,status:status })
+        return res.json(pedidolist)
+    }
     async delete(req, res) {
         const { _id } = req.params;
         const pedidolist = await Pedidos.deleteOne({ _id: _id })
