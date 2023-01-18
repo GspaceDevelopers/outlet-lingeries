@@ -55,6 +55,7 @@ routes.get("/pedidos/cpf", PedidosController.get6);
 routes.get("/pedidos/valor", PedidosController.get7);
 routes.get("/data", PedidosController.get8);
 routes.get("/idLojafranqueada",PedidosController.get9);
+routes.get("/idLojafranqueada",PedidosController.get10);
 routes.delete("/pedidos/:_id", PedidosController.delete);
 routes.put("/pedidos/:idpedido", PedidosController.update);
 
