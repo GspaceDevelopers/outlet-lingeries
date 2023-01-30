@@ -53,6 +53,7 @@ class ProdutoController {
   async store(req, res) {
     const {
       produto: produto,
+      precomaior: precomaior,
       preco: preco,
       modelo: modelo,
       marca: marca,
@@ -63,10 +64,15 @@ class ProdutoController {
       promocao2: promocao2,
       qtdpromocao2: qtdpromocao2,
       desconto: desconto,
+      subcategoria1,
+      subcategoria2,
+      subcategoria3,
+      subcategoria4,
       cores: {
         corPrimary: {
           imgurl: imgurl,
           imgurl2: imgurl2,
+          imgurl3: imgurl3,
           cor1: cor1,
           tamanhos: {
             tamanhoOne: { tamanho1: tamanho1, quantidade: quantidade },
@@ -76,8 +82,9 @@ class ProdutoController {
           },
         },
         corSecondary: {
-          imgurl3: imgurl3,
           imgurl4: imgurl4,
+          imgurl5: imgurl5,
+          imgurl6: imgurl6,
           cor2: cor2,
           tamanhos: {
             tamanhoOne: { tamanho5: tamanho5, quantidade5: quantidade5 },
@@ -87,8 +94,9 @@ class ProdutoController {
           },
         },
         corTertiary: {
-          imgurl5: imgurl5,
-          imgurl6: imgurl6,
+          imgurl7: imgurl7,
+          imgurl8: imgurl8,
+          imgurl9: imgurl9,
           cor3: cor3,
           tamanhos: {
             tamanhoOne: { tamanho9: tamanho9, quantidade9: quantidade9 },
@@ -98,14 +106,39 @@ class ProdutoController {
           },
         },
         corQuaternary: {
-          imgurl7: imgurl7,
-          imgurl8: imgurl8,
+          imgurl10: imgurl10,
+          imgurl11: imgurl11,
+          imgurl12: imgurl12,
           cor4: cor4,
           tamanhos: {
             tamanhoOne: { tamanho13: tamanho13, quantidade13: quantidade13 },
             tamanhoTwo: { tamanho14: tamanho14, quantidade14: quantidade14 },
             tamanhoThree: { tamanho15: tamanho15, quantidade15: quantidade15 },
             tamanhoFour: { tamanho16: tamanho16, quantidade16: quantidade16 },
+          },
+        },
+        corFive: {
+          imgurl13: imgurl13,
+          imgurl14: imgurl14,
+          imgurl15: imgurl15,
+          cor5: cor5,
+          tamanhos: {
+            tamanhoOne: { tamanho17: tamanho17, quantidade17: quantidade17 },
+            tamanhoTwo: { tamanho18: tamanho18, quantidade18: quantidade18 },
+            tamanhoThree: { tamanho19: tamanho19, quantidade19: quantidade19 },
+            tamanhoFour: { tamanho20: tamanho20, quantidade20: quantidade20 },
+          },
+        },
+        corSix: {
+          imgurl16: imgurl16,
+          imgurl17: imgurl17,
+          imgurl18: imgurl18,
+          cor6: cor6,
+          tamanhos: {
+            tamanhoOne: { tamanho21: tamanho21, quantidade21: quantidade21 },
+            tamanhoTwo: { tamanho22: tamanho22, quantidade22: quantidade22 },
+            tamanhoThree: { tamanho23: tamanho23, quantidade23: quantidade23 },
+            tamanhoFour: { tamanho24: tamanho24, quantidade24: quantidade24 },
           },
         },
       },
@@ -113,6 +146,7 @@ class ProdutoController {
 
     const Produtolist = await Produtos.create({
       produto: produto,
+      precomaior: precomaior,
       preco: preco,
       modelo: modelo,
       marca: marca,
@@ -123,10 +157,15 @@ class ProdutoController {
       promocao2: promocao2,
       qtdpromocao2: qtdpromocao2,
       desconto: desconto,
+      subcategoria1,
+      subcategoria2,
+      subcategoria3,
+      subcategoria4,
       cores: {
         corPrimary: {
           imgurl: imgurl,
           imgurl2: imgurl2,
+          imgurl3: imgurl3,
           cor1: cor1,
           tamanhos: {
             tamanhoOne: { tamanho1: tamanho1, quantidade: quantidade },
@@ -136,8 +175,9 @@ class ProdutoController {
           },
         },
         corSecondary: {
-          imgurl3: imgurl3,
           imgurl4: imgurl4,
+          imgurl5: imgurl5,
+          imgurl6: imgurl6,
           cor2: cor2,
           tamanhos: {
             tamanhoOne: { tamanho5: tamanho5, quantidade5: quantidade5 },
@@ -147,8 +187,9 @@ class ProdutoController {
           },
         },
         corTertiary: {
-          imgurl5: imgurl5,
-          imgurl6: imgurl6,
+          imgurl7: imgurl7,
+          imgurl8: imgurl8,
+          imgurl9: imgurl9,
           cor3: cor3,
           tamanhos: {
             tamanhoOne: { tamanho9: tamanho9, quantidade9: quantidade9 },
@@ -158,8 +199,9 @@ class ProdutoController {
           },
         },
         corQuaternary: {
-          imgurl7: imgurl7,
-          imgurl8: imgurl8,
+          imgurl10: imgurl10,
+          imgurl11: imgurl11,
+          imgurl12: imgurl12,
           cor4: cor4,
           tamanhos: {
             tamanhoOne: { tamanho13: tamanho13, quantidade13: quantidade13 },
@@ -168,7 +210,31 @@ class ProdutoController {
             tamanhoFour: { tamanho16: tamanho16, quantidade16: quantidade16 },
           },
         },
-      },
+        corFive: {
+          imgurl13: imgurl13,
+          imgurl14: imgurl14,
+          imgurl15: imgurl15,
+          cor5: cor5,
+          tamanhos: {
+            tamanhoOne: { tamanho17: tamanho17, quantidade17: quantidade17 },
+            tamanhoTwo: { tamanho18: tamanho18, quantidade18: quantidade18 },
+            tamanhoThree: { tamanho19: tamanho19, quantidade19: quantidade19 },
+            tamanhoFour: { tamanho20: tamanho20, quantidade20: quantidade20 },
+          },
+        },
+        corSix: {
+          imgurl16: imgurl16,
+          imgurl17: imgurl17,
+          imgurl18: imgurl18,
+          cor6: cor6,
+          tamanhos: {
+            tamanhoOne: { tamanho21: tamanho21, quantidade21: quantidade21 },
+            tamanhoTwo: { tamanho22: tamanho22, quantidade22: quantidade22 },
+            tamanhoThree: { tamanho23: tamanho23, quantidade23: quantidade23 },
+            tamanhoFour: { tamanho24: tamanho24, quantidade24: quantidade24 },
+          },
+        },
+      }
     });
 
     return res.json(Produtolist);
@@ -185,6 +251,7 @@ class ProdutoController {
 
     const {
       produto: produto,
+      precomaior: precomaior,
       preco: preco,
       modelo: modelo,
       marca: marca,
@@ -195,10 +262,15 @@ class ProdutoController {
       promocao2: promocao2,
       qtdpromocao2: qtdpromocao2,
       desconto: desconto,
+      subcategoria1,
+      subcategoria2,
+      subcategoria3,
+      subcategoria4,
       cores: {
         corPrimary: {
           imgurl: imgurl,
           imgurl2: imgurl2,
+          imgurl3: imgurl3,
           cor1: cor1,
           tamanhos: {
             tamanhoOne: { tamanho1: tamanho1, quantidade: quantidade },
@@ -208,8 +280,9 @@ class ProdutoController {
           },
         },
         corSecondary: {
-          imgurl3: imgurl3,
           imgurl4: imgurl4,
+          imgurl5: imgurl5,
+          imgurl6: imgurl6,
           cor2: cor2,
           tamanhos: {
             tamanhoOne: { tamanho5: tamanho5, quantidade5: quantidade5 },
@@ -219,8 +292,9 @@ class ProdutoController {
           },
         },
         corTertiary: {
-          imgurl5: imgurl5,
-          imgurl6: imgurl6,
+          imgurl7: imgurl7,
+          imgurl8: imgurl8,
+          imgurl9: imgurl9,
           cor3: cor3,
           tamanhos: {
             tamanhoOne: { tamanho9: tamanho9, quantidade9: quantidade9 },
@@ -230,8 +304,9 @@ class ProdutoController {
           },
         },
         corQuaternary: {
-          imgurl7: imgurl7,
-          imgurl8: imgurl8,
+          imgurl10: imgurl10,
+          imgurl11: imgurl11,
+          imgurl12: imgurl12,
           cor4: cor4,
           tamanhos: {
             tamanhoOne: { tamanho13: tamanho13, quantidade13: quantidade13 },
@@ -240,12 +315,37 @@ class ProdutoController {
             tamanhoFour: { tamanho16: tamanho16, quantidade16: quantidade16 },
           },
         },
+        corFive: {
+          imgurl13: imgurl13,
+          imgurl14: imgurl14,
+          imgurl15: imgurl15,
+          cor5: cor5,
+          tamanhos: {
+            tamanhoOne: { tamanho17: tamanho17, quantidade17: quantidade17 },
+            tamanhoTwo: { tamanho18: tamanho18, quantidade18: quantidade18 },
+            tamanhoThree: { tamanho19: tamanho19, quantidade19: quantidade19 },
+            tamanhoFour: { tamanho20: tamanho20, quantidade20: quantidade20 },
+          },
+        },
+        corSix: {
+          imgurl16: imgurl16,
+          imgurl17: imgurl17,
+          imgurl18: imgurl18,
+          cor6: cor6,
+          tamanhos: {
+            tamanhoOne: { tamanho21: tamanho21, quantidade21: quantidade21 },
+            tamanhoTwo: { tamanho22: tamanho22, quantidade22: quantidade22 },
+            tamanhoThree: { tamanho23: tamanho23, quantidade23: quantidade23 },
+            tamanhoFour: { tamanho24: tamanho24, quantidade24: quantidade24 },
+          },
+        },
       },
     } = req.body;
     const Produtolist = await Produtos.updateOne(
       { _id: _id },
       {
         produto: produto,
+        precomaior: precomaior,
         preco: preco,
         modelo: modelo,
         marca: marca,
@@ -256,10 +356,15 @@ class ProdutoController {
         promocao2: promocao2,
         qtdpromocao2: qtdpromocao2,
         desconto: desconto,
+        subcategoria1,
+        subcategoria2,
+        subcategoria3,
+        subcategoria4,
         cores: {
           corPrimary: {
             imgurl: imgurl,
             imgurl2: imgurl2,
+            imgurl3: imgurl3,
             cor1: cor1,
             tamanhos: {
               tamanhoOne: { tamanho1: tamanho1, quantidade: quantidade },
@@ -269,8 +374,9 @@ class ProdutoController {
             },
           },
           corSecondary: {
-            imgurl3: imgurl3,
             imgurl4: imgurl4,
+            imgurl5: imgurl5,
+            imgurl6: imgurl6,
             cor2: cor2,
             tamanhos: {
               tamanhoOne: { tamanho5: tamanho5, quantidade5: quantidade5 },
@@ -280,8 +386,9 @@ class ProdutoController {
             },
           },
           corTertiary: {
-            imgurl5: imgurl5,
-            imgurl6: imgurl6,
+            imgurl7: imgurl7,
+            imgurl8: imgurl8,
+            imgurl9: imgurl9,
             cor3: cor3,
             tamanhos: {
               tamanhoOne: { tamanho9: tamanho9, quantidade9: quantidade9 },
@@ -291,14 +398,39 @@ class ProdutoController {
             },
           },
           corQuaternary: {
-            imgurl7: imgurl7,
-            imgurl8: imgurl8,
+            imgurl10: imgurl10,
+            imgurl11: imgurl11,
+            imgurl12: imgurl12,
             cor4: cor4,
             tamanhos: {
               tamanhoOne: { tamanho13: tamanho13, quantidade13: quantidade13 },
               tamanhoTwo: { tamanho14: tamanho14, quantidade14: quantidade14 },
               tamanhoThree: { tamanho15: tamanho15, quantidade15: quantidade15 },
               tamanhoFour: { tamanho16: tamanho16, quantidade16: quantidade16 },
+            },
+          },
+          corFive: {
+            imgurl13: imgurl13,
+            imgurl14: imgurl14,
+            imgurl15: imgurl15,
+            cor5: cor5,
+            tamanhos: {
+              tamanhoOne: { tamanho17: tamanho17, quantidade17: quantidade17 },
+              tamanhoTwo: { tamanho18: tamanho18, quantidade18: quantidade18 },
+              tamanhoThree: { tamanho19: tamanho19, quantidade19: quantidade19 },
+              tamanhoFour: { tamanho20: tamanho20, quantidade20: quantidade20 },
+            },
+          },
+          corSix: {
+            imgurl16: imgurl16,
+            imgurl17: imgurl17,
+            imgurl18: imgurl18,
+            cor6: cor6,
+            tamanhos: {
+              tamanhoOne: { tamanho21: tamanho21, quantidade21: quantidade21 },
+              tamanhoTwo: { tamanho22: tamanho22, quantidade22: quantidade22 },
+              tamanhoThree: { tamanho23: tamanho23, quantidade23: quantidade23 },
+              tamanhoFour: { tamanho24: tamanho24, quantidade24: quantidade24 },
             },
           },
         },
