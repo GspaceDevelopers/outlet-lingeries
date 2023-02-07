@@ -2,9 +2,10 @@ import Edicaohome from "../schemas/Edicaohome";
 
 class EdicaohomeController {
     async post(req, res) {
-        const { componentetexto1, componentelogos: { logo1, logo2, logo3, logo4, logo5, logo6, logo7, }, backgoundhome: { background1, background2, background3, backgroundmobile1, backgroundmobile2, backgroundmobile3 }, componentetexto2, banners: { banner1, banner2, banner3, banner4, banner5, banner6, banner7 } } = req.body;
+        const { componentetexto1, bannermodalpromocao, componentelogos: { logo1, logo2, logo3, logo4, logo5, logo6, logo7, }, backgoundhome: { background1, background2, background3, backgroundmobile1, backgroundmobile2, backgroundmobile3 }, componentetexto2, banners: { banner1, banner2, banner3, banner4, banner5, banner6, banner7 } } = req.body;
         const Edicaolist = await Edicaohome.create({
             componentetexto1: componentetexto1,
+            bannermodalpromocao: bannermodalpromocao,
             componentelogos: {
                 logo1: logo1,
                 logo2: logo2,
@@ -37,9 +38,10 @@ class EdicaohomeController {
     }
     async update(req, res) {
         const { _id: _id } = req.params;
-        const { componentetexto1, componentelogos: { logo1, logo2, logo3, logo4, logo5, logo6, logo7, }, backgoundhome: { background1, background2, background3, backgroundmobile1, backgroundmobile2, backgroundmobile3 }, componentetexto2, banners: { banner1, banner2, banner3, banner4, banner5, banner6, banner7 } } = req.body;
+        const { componentetexto1,bannermodalpromocao,componentelogos: { logo1, logo2, logo3, logo4, logo5, logo6, logo7, }, backgoundhome: { background1, background2, background3, backgroundmobile1, backgroundmobile2, backgroundmobile3 }, componentetexto2, banners: { banner1, banner2, banner3, banner4, banner5, banner6, banner7 } } = req.body;
         const Edicaolist = await Edicaohome.updateOne({ _id: _id }, {
             componentetexto1: componentetexto1,
+            bannermodalpromocao: bannermodalpromocao,
             componentelogos: {
                 logo1: logo1,
                 logo2: logo2,
